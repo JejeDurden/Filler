@@ -6,7 +6,7 @@
 /*   By: jdesmare <jdesmare@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/18 09:47:56 by jdesmare          #+#    #+#             */
-/*   Updated: 2017/01/19 18:11:25 by jdesmare         ###   ########.fr       */
+/*   Updated: 2017/01/19 18:20:20 by jdesmare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,12 @@ int		main(void)
 			info->noplace = 1;
 		ft_place_piece(info);
 		if (info->gameover == 1)
+		{
+			free(info->map);
+			free(info->piece);
+			free(info);
 			break ;
+		}
 	}
 	return (0);
 }
