@@ -6,7 +6,7 @@
 #    By: jdesmare <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/11 10:38:56 by jdesmare          #+#    #+#              #
-#*   Updated: 2017/01/19 13:21:34 by jdesmare         ###   ########.fr       *#
+#*   Updated: 2017/01/19 15:38:41 by jdesmare         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,8 @@ SRC =	main.c						\
 		ft_get_map_info.c			\
 		ft_get_piece_info.c			\
 		ft_place_piece.c			\
+		ft_strategie.c				\
+		ft_try_piece.c				\
 
 OBJ = $(SRC:.c=.o)
 

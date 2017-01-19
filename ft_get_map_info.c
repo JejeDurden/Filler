@@ -6,7 +6,7 @@
 /*   By: jdesmare <jdesmare@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/18 15:17:59 by jdesmare          #+#    #+#             */
-/*   Updated: 2017/01/19 13:09:04 by jdesmare         ###   ########.fr       */
+/*   Updated: 2017/01/19 17:09:34 by jdesmare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,15 @@ static void		ft_get_enemy_pos(t_info *info)
 {
 	int		i;
 	int		j;
-	char	enemy;
 
 	i = 0;
-	enemy = (info->letter == 'O') ? 'X' : 'O';
+	info->enemy_letter = (info->letter == 'O') ? 'X' : 'O';
 	while (i < info->mapy)
 	{
 		j = 0;
 		while (j < info->mapx)
 		{
-			if (info->map[i][j] == enemy)
+			if (info->map[i][j] == info->enemy_letter)
 			{
 				info->enemy_pos_x = j;
 				info->enemy_pos_y = i;
@@ -39,6 +38,7 @@ static void		ft_get_enemy_pos(t_info *info)
 		}
 		i++;
 	}
+	info->strat = (info->enemy_pos_y > info->my_pos_y) ? 1 : 0;
 }
 
 void			ft_get_map_info(t_info *info)
