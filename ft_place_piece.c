@@ -6,7 +6,7 @@
 /*   By: jdesmare <jdesmare@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/19 13:21:40 by jdesmare          #+#    #+#             */
-/*   Updated: 2017/01/19 23:19:47 by jdesmare         ###   ########.fr       */
+/*   Updated: 2017/01/20 10:59:39 by jdesmare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,13 @@ void	ft_place_piece(t_info *info)
 	else if (info->strat == 3)
 		info->strat = 0;
 	if (info->noplace == 1)
+	{
 		info->gameover = 1;
+		ft_putnbr(info->y);
+		ft_putchar(' ');
+		ft_putnbr(info->x);
+		ft_putchar('\n');
+	}
 	else
 	{
 		ft_putnbr(info->y);

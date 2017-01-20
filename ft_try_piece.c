@@ -6,7 +6,7 @@
 /*   By: jdesmare <jdesmare@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/19 15:05:11 by jdesmare          #+#    #+#             */
-/*   Updated: 2017/01/19 17:28:06 by jdesmare         ###   ########.fr       */
+/*   Updated: 2017/01/20 10:54:38 by jdesmare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ int				ft_try_piece(t_info *info, int i, int j)
 		return (0);
 	else if (j + info->piece_x > info->mapx)
 		return (0);
-	else if (ft_check_me(info, i, j) == 0)
-		return (0);
-	return (1);
+	else
+		return (ft_check_me(info, i, j));
 }
