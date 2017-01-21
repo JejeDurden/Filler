@@ -6,7 +6,7 @@
 /*   By: jdesmare <jdesmare@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/19 14:12:17 by jdesmare          #+#    #+#             */
-/*   Updated: 2017/01/20 10:41:44 by jdesmare         ###   ########.fr       */
+/*   Updated: 2017/01/20 17:03:36 by jdesmare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ static int		ft_strategy_down_left(t_info *info)
 	int		j;
 
 	i = info->mapy;
-	while (i >= 0)
+	while (i > 0)
 	{
 		j = 0;
-		while (j <= info->mapx)
+		while (j < info->mapx)
 		{
 			if (ft_try_piece(info, i, j) == 1)
 			{
@@ -42,10 +42,10 @@ static int		ft_strategy_up_right(t_info *info)
 	int		j;
 
 	i = 0;
-	while (i <= info->mapy)
+	while (i < info->mapy)
 	{
 		j = info->mapx;
-		while (j >= 0)
+		while (j > 0)
 		{
 			if (ft_try_piece(info, i, j) == 1)
 			{
@@ -66,10 +66,10 @@ static int		ft_strategy_down_right(t_info *info)
 	int		j;
 
 	i = info->mapy;
-	while (i >= 0)
+	while (i > 0)
 	{
 		j = info->mapx;
-		while (j >= 0)
+		while (j > 0)
 		{
 			if (ft_try_piece(info, i, j) == 1)
 			{
@@ -90,10 +90,10 @@ static int		ft_strategy_up_left(t_info *info)
 	int		j;
 
 	i = 0;
-	while (i <= info->mapy)
+	while (i < info->mapy)
 	{
 		j = 0;
-		while (j <= info->mapx)
+		while (j < info->mapx)
 		{
 			if (ft_try_piece(info, i, j) == 1)
 			{
